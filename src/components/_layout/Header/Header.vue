@@ -15,7 +15,7 @@
       ) {{ link.title }}
       .right
         ui-language-select(header)
-        .login {{ language === 1 ? 'Login' : 'Войти'}}
+        .login {{ loginText }}
     ui-burger-menu-icon(v-if="!isDesktop")
 </template>
 
@@ -39,7 +39,18 @@ export default {
       { to: 'Test', title: 'Who we are' }
     ])
 
-    return { language, menu, dropdownMenu }
+    const loginText = computed(() => {
+      switch (language.value) {
+        case 2:
+          return 'Kirjaudu sisään'
+        case 3:
+          return 'Logga in'
+        default:
+          return 'Login'
+      }
+    })
+
+    return { language, menu, dropdownMenu, loginText }
   }
 }
 </script>

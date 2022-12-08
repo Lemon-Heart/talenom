@@ -10,7 +10,11 @@ export default function LanguageController () {
     },
     {
       id: 2,
-      name: 'Русский'
+      name: 'Finnish'
+    },
+    {
+      id: 3,
+      name: 'Swedish'
     }
   ])
 
