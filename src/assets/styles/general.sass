@@ -1,0 +1,86 @@
+@import "fonts"
+
+body
+  font-family: $fontMain
+  font-weight: 500
+  font-style: normal
+  color: $mirage
+  overflow-x: hidden
+  background: $alabaster
+  &.fixed
+    overflow: hidden
+
+.cont
+  max-width: $width
+  margin-left: auto
+  margin-right: auto
+  padding: 0 15*$u
+  @media screen and (max-width: $LWidth)
+    padding: 0 10*$u
+  @media screen and (max-width: $MWidth)
+    padding: 0 5*$u
+
+div, button, input, textarea
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: inherit
+  outline: none
+  &:focus
+    outline: none
+
+h1
+  @include h1
+
+h2
+  @include h2
+
+h3
+  @include h3
+
+.bold
+  font-weight: bold
+
+ul
+  padding-left: 5*$u
+  list-style: disc
+  li
+    color: $perfume
+    span
+      color: $mirage
+
+.swiper-button-prev, .swiper-button-next
+  top: 0!important
+  margin-top: 0!important
+  width: 60px!important
+  height: 100%!important
+  display: flex!important
+  justify-content: center!important
+  align-items: center!important
+  position: relative
+  transition: .3s
+  &:hover
+    background: $mirage
+  &::after
+    color: $mirage
+    content: '❯'!important
+    width: 40px
+    height: 40px
+    font-size: 40px!important
+    display: flex!important
+    justify-content: center!important
+    align-items: center!important
+.swiper-button-next
+  right: 0!important
+.swiper-button-prev
+  left: 0!important
+.swiper-button-prev::after
+  content: '❮'!important
+    
+.swiper-pagination-bullet
+  height: 5*$u!important
+  width: 5*$u!important
+  background: $mirage!important
+.swiper-pagination-bullet-active
+  background: $mirage!important

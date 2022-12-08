@@ -1,0 +1,72 @@
+// ***** FONTS *****
+@mixin font($label)
+  @if $label == 'h1'
+    font-family: LatoSemiBold, serif
+    font-size: 20*$u
+    line-height: 21*$u
+  @if $label == 'h1-pad'
+    font-family: LatoSemiBold, serif
+    font-size: 15*$u
+    line-height: 15.75*$u
+  @if $label == 'h1-mobile'
+    font-family: LatoSemiBold, serif
+    font-size: 10*$u
+    line-height: 10.5*$u
+
+  @if $label == 'h2'
+    font-family: LatoBold, serif
+    font-size: 15*$u
+    line-height: 15.5*$u
+  @if $label == 'h2-pad'
+    font-family: LatoSemiBold, serif
+    font-size: 12.5*$u
+    line-height: 13*$u
+  @if $label == 'h2-mobile'
+    font-family: LatoSemiBold, serif
+    font-size: 10*$u
+    line-height: 10.5*$u
+
+  @if $label == 'h3'
+    font-family: LatoBold, serif
+    font-size: 11*$u
+    line-height: 12*$u
+  @if $label == 'h3-pad'
+    font-family: LatoSemiBold, serif
+    font-size: 9*$u
+    line-height: 10*$u
+  @if $label == 'h3-mobile'
+    font-family: LatoSemiBold, serif
+    font-size: 7.5*$u
+    line-height: 8.75*$u
+
+  @if $label == 't20-semibold'
+    font-family: NunitoSemiBold, serif
+    font-size: 5*$u
+    line-height: 100%
+
+  @if $label == 't16-regular'
+    font-family: NunitoRegular, serif
+    font-size: 4*$u
+    line-height: 100%
+
+// ***** Heading *****
+@mixin h1
+  @include font('h1')
+  @media screen and (max-width: $padWidth)
+    @include font('h1-pad')
+  @media screen and (max-width: $SWidth)
+    @include font('h1-mobile')
+
+@mixin h2
+  @include font('h2')
+  @media screen and (max-width: $padWidth)
+    @include font('h2-pad')
+  @media screen and (max-width: $SWidth)
+    @include font('h2-mobile')
+
+@mixin h3
+  @include font('h3')
+  @media screen and (max-width: $padWidth)
+    @include font('h3-pad')
+  @media screen and (max-width: $SWidth)
+    @include font('h3-mobile')
