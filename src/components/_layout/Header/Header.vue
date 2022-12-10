@@ -82,21 +82,26 @@ export default {
       position: absolute
       flex-direction: column
       max-height: 0
-      overflow: hidden
+      overflow: auto
       bottom: 0
       right: -10*$u
       left: -10*$u
       transform: translateY(calc(100% + #{2*$u}))
-      // max-width: 94*$u
-      padding: 0 5*$u
+      padding-right: 10*$u
+      padding-left: 10*$u
       transition: .2s
       z-index: 100
       width: 100vw
-      height: 100vh
+      height: calc(100vh - #{13*$u})
+      @media screen and (max-width: $MWidth)
+        right: -5*$u
+        left: -5*$u
+        padding-right: 5*$u
+        padding-left: 5*$u
       &.open
-        // max-height: 100*$u
         max-height: 100vh
-        padding: 12.5*$u 5*$u
+        padding-top: 12.5*$u
+        padding-bottom: 12.5*$u
       .right
         border-top: 1px solid $mirage
         padding-top: 10*$u

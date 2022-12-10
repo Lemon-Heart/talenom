@@ -74,6 +74,7 @@ export default {
     width: 44.5*$u
     .uiLanguageSelect__wrapper
       margin-top: 0
+      bottom: 6.5*$u
       right: 0
     .uiLanguageSelect__title
       padding: 2.5*$u 4*$u
