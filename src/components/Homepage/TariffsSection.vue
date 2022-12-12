@@ -25,16 +25,13 @@ export default {
         title: 'Talenom Software',
         description: 'Control of your growing business, digital automatisation and administrative tasks',
         list: [
-          'Invoicing (e-mail)',
-          'Bank account & card',
-          'Payments',
-          'Scanning & storing receipts & documents',
-          'Travel claims',
-          'Reports (P&L, balances, accounts, ledgers)',
-          'Accounting system (invite your account or DIY)'
+          'Freelancers',
+          'Self-employed',
+          'Micro companies',
+          'Small companies'
         ],
         price: 0,
-        button: 'Download now',
+        secondDescription: 'Software that makes your life easier and helps grow your business',
         link: '',
         img: 'img/tariffs/1.png'
       },
@@ -44,15 +41,13 @@ export default {
         title: 'Talenom One',
         description: 'Improve the management of your business as a self-employed person or a freelancer with an all in-one platform',
         list: [
-          'Monthly bookkeeping',
-          'Monthly P&L & balance sheet',
-          'VAT',
-          'Financial statement & registration',
-          'Income tax return',
-          'Bank account & card'
+          'Freelancers',
+          'Self-employed',
+          'Micro companies',
+          'Small companies'
         ],
         price: 50,
-        button: 'Try for free',
+        secondDescription: 'A packaged solution of our software and accounting services',
         link: '',
         img: 'img/tariffs/2.png'
       },
@@ -62,13 +57,12 @@ export default {
         title: 'Talenom Pro',
         description: 'Control of your growing business, digital automatisation and administrative tasks',
         list: [
-          'Consolidated financial st.',
-          'Reporting dimensions',
-          'Tailored reports',
-          'Following receivables & collection'
+          'Small companies',
+          'Mid-size companies',
+          'Associations'
         ],
         price: '500+',
-        button: 'Meet our expert',
+        secondDescription: 'Experts dedicated to providing individual proactive tax, accountancy and financial services ',
         link: '',
         img: 'img/tariffs/3.png'
       }

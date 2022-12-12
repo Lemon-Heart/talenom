@@ -5,7 +5,7 @@ section.section
       .meeting__body
         h3.meeting__title Meet on your terms
         .meeting__description Do you want to speak with your consultant? The Talenom platform allows you to book a call with them at a time that works for your schedule.
-        ui-button.meeting__button
+        ui-button.meeting__button(size="M")
           a(href="" target="blank") Meet our expert
       img.meeting__img(src="img/meeting.png")
 </template>

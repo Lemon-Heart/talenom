@@ -2,20 +2,21 @@
 .tariff
   .tariff__name(:class="{'_popular': tariff.id === 2, '_pro': tariff.id === 3}") {{ tariff.name }}
   .tariff__title {{ tariff.title }}
-  .tariff__description {{ tariff.description }}
-  .tariff__bonus(v-if="tariff.id > 1") All the previous perks
+  .tariff__description.bold {{ tariff.description }}
+  .tariff__for Best for
   ul.tariff__list
     li(
       v-for="(li, i) in tariff.list"
       :key="i"
     )
       span {{ li }}
+  .tariff__description {{ tariff.secondDescription }}
   .tariff__price
     span from
     span.price € {{ tariff.price }}
     | /mo
   ui-button.tariff__button(:variant="tariff.id === 3 ? 'yellow' : ''" is-responsive)
-    a(:href="tariff.link" target="blank") {{ tariff.button }}
+    a(:href="tariff.link" target="blank") Find out more
   img.tariff__img(:src="tariff.img")
 </template>
 
@@ -66,7 +67,8 @@ export default {
     &._pro
       background: $rajah
   &__title
-    margin: 4*$u 0
+    font-family: NunitoBold
+    margin: 5*$u 0 4.25*$u
     color: $electricViolet
     font-size: 9.5*$u
     line-height: 12.5*$u
@@ -74,19 +76,20 @@ export default {
       font-size: 7.5*$u
       line-height: 9*$u
   &__description
-    color: $black
     margin-bottom: 6*$u
     font-size: 5*$u
     line-height: 6.5*$u
     @media screen and (max-width: $LWidth)
       font-size: 4.5*$u
-  &__bonus
+    &.bold
+      font-family: NunitoBold
+  &__for
     font-family: NunitoBold
     font-size: 4.5*$u
     line-height: 5*$u
     margin-bottom: 5*$u
   &__list
-    margin-bottom: 5*$u
+    margin-bottom: 6.25*$u
     font-size: 4.5*$u
     @media screen and (max-width: $LWidth)
       font-size: 3.5*$u

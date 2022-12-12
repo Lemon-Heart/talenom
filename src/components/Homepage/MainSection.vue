@@ -3,7 +3,7 @@ section.section
   .cont
     .heading
       h1 Unbeatable accounting and banking services
-      .heading__description More than accounting software. Talenom’s smart tools for smarter decisions
+      .heading__description Financial software and services for passioned entrepreneurs
     .links
       main-link(
         v-for="link in links"
@@ -26,24 +26,21 @@ export default {
       {
         id: 1,
         name: 'Talenom',
-        description: 'Software for Starting and Growing your business',
-        secondDescription: 'Have you started a business and need a hand with e-invoicing?',
+        description: 'Financial software for your business',
         button: 'Download now',
         link: ''
       },
       {
         id: 2,
         name: 'Talenom One',
-        description: 'Packages for teams less than 5 peoples',
-        secondDescription: 'Do you spend too much time trying to figure out your books?',
+        description: 'Software, banking and accounting for small organizations',
         button: 'Try  for free',
         link: ''
       },
       {
         id: 3,
         name: 'Talenom Pro',
-        description: 'Our team is more than 5 people',
-        secondDescription: 'Are you looking for a new Accounting and Payroll partner?',
+        description: 'Comprehensive solution with high quality advisory services',
         button: 'Meet our expert',
         link: '',
         yellow: true
@@ -99,14 +96,14 @@ export default {
       font-size: 7.5*$u
       line-height: 8*$u
       margin-top: 7.5*$u
-      max-width: 149*$u
       @media screen and (max-width: $padWidth)
         font-size: 5.5*$u
         line-height: 7*$u
   .links
-    margin-top: 13*$u
+    margin-top: 17.5*$u
     display: flex
-    justify-content: center
+    justify-content: space-evenly
     @media screen and (max-width: $padWidth)
+      margin-top: 9*$u
       flex-direction: column
 </style>

@@ -8,7 +8,7 @@
           :width="isDesktop ? 326 : 200"
           :height="isDesktop ? 49 : 30"
         )
-        .soc
+        .soc(v-if="soc && soc.length")
           a(
             v-for="(link, i) in soc"
             :key="i"
@@ -53,10 +53,10 @@ export default {
   },
   setup () {
     const menu = reactive([
-      { to: 'Test', title: 'TalenomONE' },
+      { to: 'Test', title: 'Talenom One' },
       { to: 'Test', title: 'Accounting' },
       { to: 'Test', title: 'Invoicing' },
-      { to: 'Test', title: 'TalenomPRO' },
+      { to: 'Test', title: 'Talenom Pro' },
       { to: 'Test', title: 'International Mobility Services' },
       { to: 'Test', title: 'Payroll services' },
       { to: 'Test', title: 'Investors' },

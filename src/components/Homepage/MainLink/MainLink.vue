@@ -8,9 +8,7 @@
       :height="24"
     )
   .link__description {{ link.description }}
-  .link__hr
-  .link__secondDescription {{ link.secondDescription }}
-  ui-button.link__button(:variant="link.yellow ? 'yellow' : ''")
+  ui-button.link__button(:variant="link.yellow ? 'yellow' : ''" size="M")
     a(:href="link.link" target="blank") {{ link.button }}
 </template>
 
@@ -34,7 +32,7 @@ export default {
   &:not(:last-child)
     margin-right: 15.5*$u
     @media screen and (max-width: $padWidth)
-      margin-bottom: 15.5*$u
+      margin-bottom: 11.25*$u
       margin-right: 0
   &:hover
     .link__name
@@ -58,23 +56,13 @@ export default {
       path
         transition: .2s
   &__description
-    margin: 3.5*$u 0
+    margin: 3.75*$u 0 6.25*$u
     text-align: center
-    font-size: 3.75*$u
-    line-height: 4.5*$u
-  &__hr
-    width: 18.75*$u
-    height: 1px
-    background: $mirage
-  &__secondDescription
-    margin: 3.5*$u 0 5*$u
-    text-align: center
-    font-size: 5*$u
-    line-height: 6*$u
-    opacity: .6
+    font-size: 4*$u
+    line-height: 5*$u
+    max-width: 61*$u
     @media screen and (max-width: $padWidth)
-      font-size: 4.5*$u
-      line-height: 6*$u
+      margin: 2.5*$u 0 5*$u
   &__button
     margin-top: auto
 </style>

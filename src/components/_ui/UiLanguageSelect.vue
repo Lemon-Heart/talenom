@@ -10,12 +10,6 @@
       :width="16"
       :height="16"
     )
-    ui-svg-icon(
-      v-else
-      name="world"
-      :width="20"
-      :height="20"
-    )
     span.uiLanguageSelect__name {{ languageController.languageName }}
     ui-svg-icon.uiLanguageSelect__icon(
       name="arrow"

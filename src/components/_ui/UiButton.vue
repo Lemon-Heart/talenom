@@ -107,45 +107,44 @@ export default {
   > .text
     white-space: nowrap
     font-family: NunitoBold, serif
-    font-size: 3.75*$u
-    line-height: 3.75*$u
 
   &._extra-small
     height: 7.5*$u
     border: 0.25*$u solid transparent
     padding: 0 6.5*$u
     > .text
-      font-family: GolosTextWebDemiBold, serif
       font-size: 4*$u
-      line-height: 5*$u
 
   &._small
     height: 8.5*$u
     border: 0.25*$u solid transparent
     padding: 0 5*$u
     > .text
-      font-family: GolosTextWebDemiBold, serif
       font-size: 4*$u
-      line-height: 5*$u
 
   &._medium
     height: 10*$u
     border: 0.25*$u solid transparent
-    padding: 0 5*$u
+    padding: 0 10*$u
     > .text
-      font-family: GolosTextWebDemiBold, serif
-      font-size: 4*$u
-      line-height: 5*$u
+      font-size: 3.75*$u
 
   &._large
     height: 12.5*$u
     border: 0.25*$u solid transparent
-    padding: 0 5*$u
+    padding: 0 10*$u
+    > .text
+      font-size: 4*$u
 
   &._extra-large
-    height: 10*$u
+    height: 14*$u
     border: 0.25*$u solid transparent
     padding: 0 10*$u
+    @media screen and (max-width: $SWidth)
+      height: 10*$u
+    > .text
+      font-size: 4.5*$u
+      line-height: 5*$u
 
   &._rounded
     border-radius: 99em
