@@ -73,14 +73,14 @@ export default {
       position: absolute
       top: 50%
       width: 100%
-      height: .5*$u
+      height: .57*$u
       background: $mirage
       transition: .3s
       transform: translateY(-50%)
       @media screen and (max-width: $MWidth)
         height: .25*$u
       &:last-child
-        transform: rotate(90deg)
+        transform: rotate(90deg) translateX(-1px)
   &__body
     height: 0
   &__content

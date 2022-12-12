@@ -36,7 +36,7 @@ export default {
       { to: 'Test', title: 'Talenom One' },
       { to: 'Test', title: 'Talenom Pro' },
       { to: 'Test', title: 'Talenom Software' },
-      { to: 'Test', title: 'Who we are' }
+      { to: 'About', title: 'Who we are' }
     ])
 
     const loginText = computed(() => {

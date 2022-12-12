@@ -8,7 +8,8 @@ section.section
       ui-input.feedback__input(v-model="email" placeholder="Email address")
       ui-input.feedback__input(v-model="message" placeholder="Comments/Questions")
       ui-button(variant="yellow" is-responsive) Send
-      .feedback__policy By submitting, you agree to our Privacy Policy
+      .feedback__policy By submitting, you agree to our
+        router-link(:to="{ name: 'Test' }") Privacy Policy
     img.feedback__img(src="/img/feedbackPhoto.png")
 </template>
 
@@ -67,6 +68,9 @@ export default {
     &__policy
       font-size: 3.5*$u
       margin-top: 5*$u
+      a
+        border-bottom: 1px solid $mirage
+        margin-left: $u
     &__img
       width: 100%
       max-height: 160*$u

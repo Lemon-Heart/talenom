@@ -6,8 +6,8 @@ tariffs-section
 partners-section
 //- about-section
 section-7
-section-8
-section-9
+questions-section
+contact-section
 </template>
 
 <script>
@@ -18,11 +18,11 @@ import CallbackSection from '@/components/Homepage/CallbackSection'
 import TariffsSection from '@/components/Homepage/TariffsSection'
 import AboutSection from '@/components/Homepage/AboutSection'
 import Section7 from '@/components/Homepage/Section7.vue'
-import Section8 from '@/components/Homepage/Section8.vue'
-import Section9 from '@/components/Homepage/Section9.vue'
+import QuestionsSection from '@/components/Homepage/QuestionsSection'
+import ContactSection from '@/components/Homepage/ContactSection'
 
 export default {
-  components: { MainSection, PartnersSection, AdvantagesSection, CallbackSection, TariffsSection, AboutSection, Section7, Section8, Section9 },
+  components: { MainSection, PartnersSection, AdvantagesSection, CallbackSection, TariffsSection, AboutSection, Section7, QuestionsSection, ContactSection },
   setup () {
     return { }
   }
