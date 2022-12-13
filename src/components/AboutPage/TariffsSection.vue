@@ -18,7 +18,7 @@ export default {
         id: 1,
         title: 'Entrepreneurs',
         description: 'The entreprenerial heart and mind is the core of our community. <b>We use data, digital automatization, and proactive professionals to ensure the Entrepreneur feels cared for.</b> We can plan the future together and guide and advise through the company’s life cycle. Cash flow is the oxygen, we make it flow. Our entrepreneurs shall never feel left alone.',
-        link: 'Learn more services',
+        link: 'Learn more about Talenom One',
         to: '',
         img: 'img/aboutPage/2.png'
       },
@@ -26,7 +26,7 @@ export default {
         id: 2,
         title: 'Enterprises',
         description: 'We grow as our customers grow. Our services expand to our partners’ needs. We become the trusted consultants that provide structure, deep knowledge, and proactive recommendations.We use this mindset to speak with and support Enterprises. We simplify the journey to success, <b>we have the will and assurance to bring great results.</b>',
-        link: 'Learn more services',
+        link: 'Learn more about Talenom Pro',
         to: '',
         img: 'img/aboutPage/3.png'
       },

@@ -2,7 +2,7 @@
 .item(:id="`info-item-${item.id}`")
   .item__body
     h3.item__title {{ item.title }}
-    .item__description {{ item.description }}
+    .item__description(v-html="item.description")
     ui-link(v-if="item.link" :href="item.to") {{ item.link }}
   img.item__img(:src="item.img")
 </template>

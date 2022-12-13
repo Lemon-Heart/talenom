@@ -8,13 +8,13 @@ section.section
     .content
       .content__left
         .content__item
-          .bold Empathy is the starting point.
+          b Empathy is the starting point.
           | Empathy makes it possible to care and understand. Understanding creates trust and trust gives freedom. Freedom to live as an entrepreneur.
         .content__item
-          .bold Fear is your biggest enemy,
+          b Fear is your biggest enemy,
           | whether you are just starting, renewing, or mastering your business. With unnegotiable figures and statistics, we can encourage and direct focus on core game-changers of your success.
         .content__item
-          .bold Successful businesses are so much more than just financing.
+          b Successful businesses are so much more than just financing.
           | Still, the most rewarding insight is that numbers and finances can direct and ease your decision-making bringing clarity to the big picture.
       .content__right
 </template>
@@ -29,8 +29,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.bold
-  font-family: NunitoBold
+b
+  margin-right: $u
 .section
   margin: 15*$u 0 35*$u
   @media screen and (max-width: $mobileWidth)

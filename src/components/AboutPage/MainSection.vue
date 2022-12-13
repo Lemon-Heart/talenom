@@ -109,7 +109,7 @@ export default {
     &__body
       display: flex
       flex-direction: column
-      padding-right: 25*$u
+      padding-right: 16*$u
       width: 50%
       z-index: 1
       @media screen and (max-width: $XLWidth)
