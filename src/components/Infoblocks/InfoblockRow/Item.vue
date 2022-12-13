@@ -1,30 +1,30 @@
 <template lang="pug">
-.tariff
-  .tariff__name(:class="{'_popular': tariff.id === 2, '_pro': tariff.id === 3}") {{ tariff.name }}
-  .tariff__title {{ tariff.title }}
-  .tariff__description.bold {{ tariff.description }}
-  .tariff__for Best for
-  ul.tariff__list
+.item
+  .item__name(v-if="item.name" :class="{'_popular': item.id === 2, '_pro': item.id === 3}") {{ item.name }}
+  .item__title {{ item.title }}
+  .item__description(:class="{ 'bold': item.secondDescription }" v-html="item.description")
+  .item__for(v-if="item.list") Best for
+  ul.item__list(v-if="item.list")
     li(
-      v-for="(li, i) in tariff.list"
+      v-for="(li, i) in item.list"
       :key="i"
     )
       span {{ li }}
-  .tariff__description {{ tariff.secondDescription }}
-  .tariff__price
+  .item__description(v-if="item.secondDescription") {{ item.secondDescription }}
+  .item__price(v-if="item.price")
     span from
-    span.price € {{ tariff.price }}
+    span.price € {{ item.price }}
     | /mo
-  ui-button.tariff__button(:variant="tariff.id === 3 ? 'yellow' : ''" is-responsive)
-    a(:href="tariff.link" target="blank") Find out more
-  img.tariff__img(:src="tariff.img")
+  ui-link.item__link(v-if="item.link" :to="item.to") {{ item.link }}
+  ui-button.item__button(v-if="item.button" :variant="item.id === 3 ? 'yellow' : ''" is-responsive)
+    a(:href="item.to" target="blank") {{ item.button }}
+  img.item__img(:src="item.img")
 </template>
 
 <script>
 export default {
-  components: { },
   props: {
-    tariff: Object
+    item: Object
   },
   setup () {
     return { }
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.tariff
+.item
   display: flex
   flex-direction: column
   &:not(:last-child)
@@ -119,11 +119,14 @@ export default {
     margin: 4.5*$u 0 11*$u
     @media screen and (max-width: $padWidth)
       margin-bottom: 0
+  &__link
+    margin-bottom: 11.5*$u
+    margin-top: auto
+    @media screen and (max-width: $padWidth)
+      margin-bottom: 8*$u
   &__img
     height: 60*$u
     object-fit: cover
     object-position: center
     width: 100%
-    @media screen and (max-width: $padWidth)
-      display: none
 </style>

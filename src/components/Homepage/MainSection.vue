@@ -34,7 +34,7 @@ export default {
         id: 2,
         name: 'Talenom One',
         description: 'Software, banking and accounting for small organizations',
-        button: 'Try  for free',
+        button: 'Find out more',
         link: ''
       },
       {

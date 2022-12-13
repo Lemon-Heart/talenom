@@ -104,8 +104,6 @@ export default {
       background: $porcelain
     &:focus
       border: .5*$u solid $periwinkleGray
-    @media screen and (max-width: $MWidth)
-      height: 12.5*$u
     &::-webkit-input-placeholder
       opacity: .5
     &::-moz-placeholder

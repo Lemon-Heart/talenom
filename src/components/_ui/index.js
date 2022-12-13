@@ -8,6 +8,7 @@ import UiFullScreenLoader from './UiFullScreenLoader'
 import UiBaseLoader from './UiBaseLoader'
 import UiClose from './UiClose'
 import UiBurgerMenuIcon from './UiBurgerMenuIcon'
+import UiLink from './UiLink'
 
 export default function initializeUiKit (app) {
   app.component('UiSvgIcon', UiSvgIcon)
@@ -20,4 +21,5 @@ export default function initializeUiKit (app) {
   app.component('UiBaseLoader', UiBaseLoader)
   app.component('UiClose', UiClose)
   app.component('UiBurgerMenuIcon', UiBurgerMenuIcon)
+  app.component('UiLink', UiLink)
 }

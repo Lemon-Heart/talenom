@@ -10,7 +10,7 @@ section.section
       ui-button(variant="yellow" is-responsive) Send
       .feedback__policy By submitting, you agree to our
         router-link(:to="{ name: 'Test' }") Privacy Policy
-    img.feedback__img(src="/img/feedbackPhoto.png")
+    img.feedback__img(src="/img/homePage/feedbackPhoto.png")
 </template>
 
 <script>
@@ -38,11 +38,10 @@ export default {
     display: flex
     align-items: center
     padding-left: calc((100% - 1320px) / 2)
-    @media screen and (max-width: $LWidth)
-      flex-direction: column
     @media screen and (max-width: $XXLWidth)
       padding-left: 15*$u
     @media screen and (max-width: $LWidth)
+      flex-direction: column
       padding-left: 0
     &__form
       padding: 10*$u 21*$u 10*$u 0

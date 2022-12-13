@@ -1,42 +1,40 @@
 <template lang="pug">
 section.section
   .cont
-    .advantages
-      advantage(
-        v-for="advantage in advantages"
-        :key="advantage.id"
-        :advantage="advantage"
-      )
+    infoblock-column(:items="advantages" nm rs)
 </template>
 
 <script>
 import { reactive } from 'vue'
-import Advantage from './Advanatage/Advantage'
+import InfoblockColumn from '@/components/Infoblocks/InfoblockColumn/Infoblock'
 
 export default {
-  components: { Advantage },
+  components: { InfoblockColumn },
   setup () {
     const advantages = reactive([
       {
         id: 1,
-        title: 'E-invoicing made easy',
+        title: 'invoicing made easy',
         description: 'Talenom has been a leader in e-invoicing and makes sure you benefit from the effiency it brings to your business while ensuring you are compliant with government mandates.',
-        linkTitle: 'Learn more about Talenom Software',
-        link: ''
+        link: 'Learn more about Talenom Software',
+        to: '',
+        img: 'img/homePage/advantages/1.png'
       },
       {
         id: 2,
-        title: 'Bank account included',
-        description: 'Need a bank account for your business? With Talenom One you can simply extend our solution to include a fully integrated Euro bank account and Mastercard®. And did we mention it is commission free?',
-        linkTitle: 'Learn more about Talenom One',
-        link: ''
+        title: 'Accounting for doers',
+        description: 'Talenom One is the perfect package for entrepreneurs on the move. We’ve got you covered with the best accounting and financial services team in town. Wouldn’t you like to spend more time doing what you love and less time working on VAT?',
+        link: 'Learn more about Talenom One',
+        to: '',
+        img: 'img/homePage/advantages/2.png'
       },
       {
         id: 3,
         title: 'Proactive support',
         description: 'Your Talenom consultant has their fingers on the financial pulse of your business and with regularly schedulled meetings and calls, we make sure you get the advice and information you need to make important decisions.',
-        linkTitle: 'Learn more about Talenom Pro',
-        link: ''
+        link: 'Learn more about Talenom Pro',
+        to: '',
+        img: 'img/homePage/advantages/3.png'
       }
     ])
     return { advantages }
@@ -49,7 +47,13 @@ export default {
   margin: 15*$u 0
   @media screen and (max-width: $mobileWidth)
     margin: 12.5*$u 0
-  .advantages
-    display: flex
-    flex-direction: column
+  &:deep
+    .item:last-child
+      .item__body
+        margin-bottom: 20*$u
+      .item__img
+        @media screen and (max-width: $XXLWidth)
+          width: 50%
+        @media screen and (max-width: $padWidth)
+          width: 100%
 </style>

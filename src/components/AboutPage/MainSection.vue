@@ -3,11 +3,9 @@ section.section
   .cont
     .meeting
       .meeting__body
-        h3.meeting__title Meet on your terms
+        h1.meeting__title The meaning of numbers
         .meeting__description Do you want to speak with your consultant? The Talenom platform allows you to book a call with them at a time that works for your schedule.
-        ui-button.meeting__button(size="M")
-          a(href="" target="blank") Meet our expert
-      img.meeting__img(src="img/homePage/meeting.png")
+      img.meeting__img(src="img/aboutPage/9.png")
 </template>
 
 <script>
@@ -21,12 +19,16 @@ export default {
 
 <style lang="sass" scoped>
 .section
-  margin: 15*$u 0
-  padding: 34*$u 0 30*$u
+  margin-bottom: 15*$u
+  padding: 25*$u 0 10*$u
   background: $hawkesBlue
   position: relative
   z-index: 1
   overflow: hidden
+  @media screen and (max-width: $padWidth)
+    padding: 7.5*$u 0 9.5*$u
+  @media screen and (max-width: $mobileWidth)
+    margin-bottom: 12.5*$u
   &:before, &:after
     content: ''
     position: absolute
@@ -38,7 +40,7 @@ export default {
       background-size: cover
   &:before
     z-index: 1
-    background-image: url('/public/img/bg-lines/line1-large.png')
+    background-image: url('/public/img/bg-lines/yellowLine1.png')
     left: 0
     width: 65%
     height: 220px
@@ -62,7 +64,7 @@ export default {
       width: 64%
   &:after
     z-index: -1
-    background-image: url('/public/img/bg-lines/line2-large.png')
+    background-image: url('/public/img/bg-lines/yellowLine2.png')
     right: 0
     width: 36%
     height: 90%
@@ -83,10 +85,6 @@ export default {
       width: 41%
     @media screen and (max-width: $mobileWidth)
       height: 60%
-  @media screen and (max-width: $padWidth)
-    padding: 7.5*$u 0 9.5*$u
-  @media screen and (max-width: $mobileWidth)
-    margin: 12.5*$u 0
   .meeting
     display: flex
     @media screen and (max-width: $padWidth)
@@ -96,14 +94,14 @@ export default {
       flex-direction: column
       padding-right: 25*$u
       width: 50%
-      justify-content: center
+      justify-content: space-between
+      z-index: 1
       @media screen and (max-width: $XLWidth)
         padding-right: 12.5*$u
       @media screen and (max-width: $padWidth)
         padding-right: 0
         margin-bottom: 10*$u
         width: 100%
-    &__title
     &__description
       font-size: 6*$u
       line-height: 9.5*$u
@@ -118,6 +116,7 @@ export default {
       width: 50%
       object-fit: contain
       object-position: center
+      padding-bottom: 15*$u
       @media screen and (max-width: $padWidth)
         width: 100%
       // @media screen and (max-width: $MWidth)

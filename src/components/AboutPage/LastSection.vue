@@ -2,7 +2,8 @@
 section.section
   .cont
     .heading
-      h2 How it all comes together
+      span
+        h2 How it all comes together
       .heading__description To us, care is passing on a positive can-do attitude and sharing responsibility
     .content
       .content__left
@@ -38,31 +39,33 @@ export default {
     display: flex
     justify-content: space-between
     margin-bottom: 15*$u
-    align-items: flex-end
+    align-items: center
     @media screen and (max-width: $LWidth)
       flex-direction: column
-      margin-bottom: 35px
+      margin-bottom: 8.75*$u
     h2
       padding-right: 15*$u
       @media screen and (max-width: $LWidth)
-        margin-bottom: 15px
+        margin-bottom: 3.5*$u
         padding-right: 0
     & > *
       width: 50%
+      flex-shrink: 0
       @media screen and (max-width: $LWidth)
         width: 100%
     &__description
-      font-size: 35px
+      font-size: 8.75*$u
       line-height: 140%
     @media screen and (max-width: $XLWidth)
-      font-size: 24px
-      line-height: 30px
+      font-size: 6*$u
+      line-height: 7.5*$u
   .content
     display: flex
     @media screen and (max-width: $LWidth)
       flex-direction: column
     > *
       width: 50%
+      flex-shrink: 0
       @media screen and (max-width: $LWidth)
         width: 100%
     &__left
@@ -71,12 +74,12 @@ export default {
         padding-right: 0
     &__item
       padding: 7.5*$u 0
-      border-bottom: 2px solid #D9D9D9
-      font-size: 24px
-      line-height: 38px
+      border-bottom: .5*$u solid rgb(20, 31, 46, .1)
+      font-size: 6*$u
+      line-height: 9.5*$u
       @media screen and (max-width: $XLWidth)
-        font-size: 18px
-        line-height: 28px
+        font-size: 4.5*$u
+        line-height: 7*$u
         padding: 5*$u 0
       &:last-child
         border: none
@@ -89,6 +92,6 @@ export default {
       background-size: cover
       background-position: center
       @media screen and (max-width: $LWidth)
-        margin-top: 30px
-        height: 400px
+        margin-top: 7.5*$u
+        height: 100*$u
 </style>

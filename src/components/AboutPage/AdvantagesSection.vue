@@ -1,20 +1,15 @@
 <template lang="pug">
 section.section
   .cont
-    .advantages
-      advantage(
-        v-for="advantage in advantages"
-        :key="advantage.id"
-        :advantage="advantage"
-      )
+    infoblock-column(:items="advantages")
 </template>
 
 <script>
 import { reactive } from 'vue'
-import Advantage from './Advanatage/Advantage'
+import InfoblockColumn from '@/components/Infoblocks/InfoblockColumn/Infoblock'
 
 export default {
-  components: { Advantage },
+  components: { InfoblockColumn },
   setup () {
     const advantages = reactive([
       {
@@ -46,7 +41,4 @@ export default {
   margin: 15*$u 0
   @media screen and (max-width: $mobileWidth)
     margin: 12.5*$u 0
-  .advantages
-    display: flex
-    flex-direction: column
 </style>

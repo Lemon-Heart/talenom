@@ -3,7 +3,7 @@ section.section
   .cont
     .links
       a.left.link
-        img.left__img(src="/img/1.png")
+        img.left__img(src="/img/homePage/1.png")
         .left__body
           .icon
             ui-svg-icon(
@@ -81,7 +81,7 @@ export default {
     .right
       &__img
         height: 126*$u
-        background-image: url('/public/img/blogLine.png')
+        background-image: url('/public/img/homePage/blogLine.png')
         background-position: center
         background-repeat: no-repeat
         background-size: cover

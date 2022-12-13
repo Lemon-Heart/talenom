@@ -1,16 +1,16 @@
 <template lang="pug">
-.advantage
-  .advantage__body
-    h3.advantage__title {{ advantage.title }}
-    .advantage__description {{ advantage.description }}
-  img.advantage__img(:src="advantage.img")
+.item
+  .item__body
+    h3.item__title {{ item.title }}
+    .item__description {{ item.description }}
+    ui-link(v-if="item.link" :href="item.to") {{ item.link }}
+  img.item__img(:src="item.img")
 </template>
 
 <script>
 export default {
-  components: { },
   props: {
-    advantage: Object
+    item: Object
   },
   setup () {
     return { }
@@ -19,20 +19,18 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.advantage
+.item
   display: flex
   align-items: center
   justify-content: space-between
-  gap: 10*$u
+  gap: 12*$u
   &:not(:last-child)
-    margin-bottom: 130px
-  // &:last-child .advantage__body
-  //   margin-bottom: 20*$u
+    margin-bottom: 32.5*$u
+    @media screen and (max-width: $padWidth)
+      margin-bottom: 25*$u
   @media screen and (max-width: $padWidth)
     flex-direction: column-reverse!important
     margin-bottom: 20*$u
-  &:nth-child(2n - 1)
-    flex-direction: row-reverse
   &:last-child
     margin-bottom: 0
     .advantage__img
@@ -43,7 +41,10 @@ export default {
   &__body
     display: flex
     flex-direction: column
-    max-width: 138*$u
+    // max-width: 138*$u
+    width: 50%
+    @media screen and (max-width: $padWidth)
+      width: 100%
   &__title
   &__description
     font-size: 6*$u

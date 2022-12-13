@@ -7,7 +7,7 @@ section.section
       img.partners__item(
         v-for="i in 6"
         :key="i"
-        :src="`img/partners/${i}.png`"
+        :src="`img/homePage/partners/${i}.png`"
       )
 </template>
 
