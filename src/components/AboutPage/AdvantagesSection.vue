@@ -14,7 +14,7 @@ export default {
     const advantages = reactive([
       {
         id: 1,
-        title: 'The meaning of numbers',
+        title: 'The value of numbers',
         description: 'We will never run out of numbers. They measure the world, but it’s us who give meaning and value to them.<br><br>For over 50 years we’ve shared this mission with our clients, valued their courage, <b>cared about their needs, and driven toward the future with healthier businesses.</b><br><br>We strive to make the world run better with better numbers.',
         img: 'img/aboutPage/6.png'
       },

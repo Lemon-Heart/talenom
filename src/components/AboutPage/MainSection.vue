@@ -4,7 +4,7 @@ section.section
     .meeting
       .meeting__body
         h1.meeting__title The meaning of numbers
-        .meeting__description We will never run out of numbers. They measure the world, but it’s us who give meaning and value to them
+        //- .meeting__description We will never run out of numbers. They measure the world, but it’s us who give meaning and value to them
         .meeting__menu-heading Who we are
         .meeting__menu
           span(@click="scrollTo('info-item-1')") The meaning of numbers
@@ -49,7 +49,7 @@ export default {
     background-repeat: no-repeat
     background-size: 100% 100%
     background-position: bottom left
-    @media screen and (max-width: $padWidth)
+    @media screen and (max-width: $LWidth)
       background-size: cover
   &:before
     z-index: 1
@@ -67,7 +67,7 @@ export default {
       left: -10%
       width: 85%
       bottom: -15%
-    @media screen and (max-width: $padWidth)
+    @media screen and (max-width: $LWidth)
       // background-image: url('/public/img/bg-lines/line1-mobile.png')
       bottom: 0
       left: 0
@@ -91,10 +91,9 @@ export default {
       width: 26%
     @media screen and (max-width: $LWidth)
       width: 30%
-    @media screen and (max-width: $padWidth)
       // background-image: url('/public/img/bg-lines/line2-mobile.png')
-      bottom: 0
-      width: 40%
+      // bottom: 0
+      width: 38%
       height: 80%
       background-position: top left
     @media screen and (max-width: $MWidth)
@@ -104,7 +103,7 @@ export default {
       height: 60%
   .meeting
     display: flex
-    @media screen and (max-width: $padWidth)
+    @media screen and (max-width: $LWidth)
       flex-direction: column
     &__body
       display: flex
@@ -114,7 +113,7 @@ export default {
       z-index: 1
       @media screen and (max-width: $XLWidth)
         padding-right: 12.5*$u
-      @media screen and (max-width: $padWidth)
+      @media screen and (max-width: $LWidth)
         padding-right: 0
         margin-bottom: 10*$u
         width: 100%
@@ -127,7 +126,7 @@ export default {
         font-size: 4.5*$u
         line-height: 7*$u
         margin-bottom: 4*$u
-      @media screen and (max-width: $padWidth)
+      @media screen and (max-width: $LWidth)
         margin: 4*$u 0 7.5*$u
     &__menu-heading
       margin-top: auto
@@ -135,6 +134,8 @@ export default {
       font-size: 7.5*$u
       line-height: 8*$u
       margin-bottom: 5*$u
+      @media screen and (max-width: $LWidth)
+        margin-top: 7.5*$u
     &__menu
       font-size: 4*$u
       line-height: 5*$u
@@ -149,7 +150,7 @@ export default {
       object-fit: contain
       object-position: center
       padding-bottom: 15*$u
-      @media screen and (max-width: $padWidth)
+      @media screen and (max-width: $LWidth)
         width: 100%
       // @media screen and (max-width: $MWidth)
       //   width: 60%
