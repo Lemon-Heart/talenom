@@ -4,7 +4,14 @@ section.section
     .meeting
       .meeting__body
         h1.meeting__title The meaning of numbers
-        .meeting__description Do you want to speak with your consultant? The Talenom platform allows you to book a call with them at a time that works for your schedule.
+        .meeting__description We will never run out of numbers. They measure the world, but it’s us who give meaning and value to them
+        .meeting__menu-heading Who we are
+        .meeting__menu
+          span(@click="scrollTo('info-item-1')") The meaning of numbers
+          span(@click="scrollTo('aboutSection')") Our people, our tribe, our community
+          span(@click="scrollTo('info-item-2')") Strength in numbers
+          span(@click="scrollTo('lastAboutSection')") How it all comes together
+          span(@click="scrollTo('info-item-3')") What we believe in
       img.meeting__img(src="img/aboutPage/9.png")
 </template>
 
@@ -12,7 +19,13 @@ section.section
 export default {
   components: { },
   setup () {
-    return { }
+    const scrollTo = (id) => {
+      document.getElementById(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    return { scrollTo }
   }
 }
 </script>
@@ -43,39 +56,43 @@ export default {
     background-image: url('/public/img/bg-lines/yellowLine1.png')
     left: 0
     width: 65%
-    height: 220px
+    height: 110*$u
+    background-position: top right
+    background-size: cover
     @media screen and (max-width: $XLWidth)
       bottom: -5%
-      background-image: url('/public/img/bg-lines/line1.png')
+      // background-image: url('/public/img/bg-lines/line1.png')
       width: 75%
     @media screen and (max-width: $LWidth)
       left: -10%
       width: 85%
       bottom: -15%
     @media screen and (max-width: $padWidth)
-      background-image: url('/public/img/bg-lines/line1-mobile.png')
+      // background-image: url('/public/img/bg-lines/line1-mobile.png')
       bottom: 0
       left: 0
       width: 65%
       background-position: top right
-      height: 180px
+      // height: 180px
     @media screen and (max-width: $MWidth)
-      height: 140px
+      // height: 140px
       width: 64%
   &:after
     z-index: -1
     background-image: url('/public/img/bg-lines/yellowLine2.png')
     right: 0
     width: 36%
-    height: 90%
+    height: 80%
+    background-position: top left
+    background-size: cover
     @media screen and (max-width: $XLWidth)
       bottom: -5%
-      background-image: url('/public/img/bg-lines/line2.png')
+      // background-image: url('/public/img/bg-lines/line2.png')
       width: 26%
     @media screen and (max-width: $LWidth)
       width: 30%
     @media screen and (max-width: $padWidth)
-      background-image: url('/public/img/bg-lines/line2-mobile.png')
+      // background-image: url('/public/img/bg-lines/line2-mobile.png')
       bottom: 0
       width: 40%
       height: 80%
@@ -94,7 +111,6 @@ export default {
       flex-direction: column
       padding-right: 25*$u
       width: 50%
-      justify-content: space-between
       z-index: 1
       @media screen and (max-width: $XLWidth)
         padding-right: 12.5*$u
@@ -106,12 +122,28 @@ export default {
       font-size: 6*$u
       line-height: 9.5*$u
       margin: 5*$u 0 7.5*$u
+      font-family: NunitoSemiBold
       @media screen and (max-width: $XLWidth)
         font-size: 4.5*$u
         line-height: 7*$u
         margin-bottom: 4*$u
       @media screen and (max-width: $padWidth)
         margin: 4*$u 0 7.5*$u
+    &__menu-heading
+      margin-top: auto
+      font-family: NunitoBold
+      font-size: 7.5*$u
+      line-height: 8*$u
+      margin-bottom: 5*$u
+    &__menu
+      font-size: 4*$u
+      line-height: 5*$u
+      display: grid
+      gap: 5*$u
+      grid-template-columns: repeat(2, minmax(#{20*$u}, 1fr))
+      span
+        text-decoration: underline
+        cursor: pointer
     &__img
       width: 50%
       object-fit: contain

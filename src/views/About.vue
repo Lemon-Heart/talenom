@@ -2,8 +2,8 @@
 main-section
 advantages-section
 challenge-section
-tariffs-section
-last-section
+tariffs-section(id="aboutSection")
+last-section(id="lastAboutSection")
 </template>
 
 <script>

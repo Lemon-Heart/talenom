@@ -14,7 +14,7 @@ export default {
     const advantages = reactive([
       {
         id: 1,
-        title: 'invoicing made easy',
+        title: 'Invoicing made easy',
         description: 'Talenom has been a leader in e-invoicing and makes sure you benefit from the effiency it brings to your business while ensuring you are compliant with government mandates.',
         link: 'Learn more about Talenom Software',
         to: '',

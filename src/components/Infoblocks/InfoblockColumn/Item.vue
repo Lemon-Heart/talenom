@@ -1,5 +1,5 @@
 <template lang="pug">
-.item
+.item(:id="`info-item-${item.id}`")
   .item__body
     h3.item__title {{ item.title }}
     .item__description {{ item.description }}
