@@ -139,12 +139,11 @@ export default {
     min-width: 120*$u
     position: relative
     z-index: 100
-    background: black
+    background: $alto
     border-radius: $BR
     padding: 10*$u
     margin: auto
     color: $mirage
-    border: 1px solid white
 
     @media screen and (max-width: 765px)
       max-width: calc(100% - #{2*7.5*$u})

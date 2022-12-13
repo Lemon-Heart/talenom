@@ -1,9 +1,10 @@
 <template lang="pug">
-.header
-  app-header(:is-desktop="isDesktop")
-router-view
-.footer
-  app-footer(:is-desktop="isDesktop")
+template(v-if="isAuth")
+  .header
+    app-header(:is-desktop="isDesktop")
+  router-view
+  .footer
+    app-footer(:is-desktop="isDesktop")
 app-modal
 </template>
 
@@ -11,11 +12,26 @@ app-modal
 import AppHeader from '@/components/_layout/Header/Header'
 import AppFooter from '@/components/_layout/Footer/Footer'
 import AppModal from '@/components/_layout/Modal/Modal'
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import AdminComponent from '@/components/AdminComponent'
+import { ref, inject, computed, onMounted, onUnmounted } from 'vue'
 
 export default {
   components: { AppHeader, AppModal, AppFooter },
   setup () {
+    // remove in future
+    const store = inject('store')
+    const isAuth = computed(() => store.modalQueue.isAuth)
+
+    if (!isAuth.value) {
+      store.modalQueue.push({
+        key: 'AdminComponent',
+        component: AdminComponent,
+        params: {
+          isClosable: false
+        }
+      })
+    }
+    // end
     const WW = ref()
     const setWW = () => (WW.value = window.innerWidth)
     onMounted(() => {
@@ -28,7 +44,7 @@ export default {
       else return false
     })
 
-    return { isDesktop }
+    return { isDesktop, isAuth }
   }
 }
 </script>

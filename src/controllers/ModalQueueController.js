@@ -1,5 +1,9 @@
 import { ref, computed, markRaw } from 'vue'
 export default function ModalQueueController (debugMode = false) {
+  // delete in future
+  const adminToken = ref(localStorage.getItem('admin_token') || '')
+  const isAuth = computed(() => adminToken.value)
+  // end delete
   // Очередь модалок
   const queue = ref([])
 
@@ -40,7 +44,10 @@ export default function ModalQueueController (debugMode = false) {
     activeModal,
     push: addModal,
     remove: removeModal,
-    removeAll: removeAllModals
+    removeAll: removeAllModals,
+    // delete in future
+    isAuth,
+    adminToken
   }
 }
 

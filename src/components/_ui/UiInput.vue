@@ -11,10 +11,10 @@ label.uiInputComponent(v-show="type !== 'hidden'" :class="classed")
   )
   template(v-if="type === 'password'")
     .icon(v-if="iconName" @click="toggleViewPass")
-      ui-svg-icon(:name="iconName" :size="30")
+      ui-svg-icon(:name="iconName" :width="30" :height="30")
   template(v-else)
     .icon(v-if="iconName" @click="onIconClick")
-      ui-svg-icon(:name="iconName" :size="30")
+      ui-svg-icon(:name="iconName" :width="30" :height="30")
 </template>
 
 <script>
